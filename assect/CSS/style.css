@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #f5f5f5;
+  height: 100vh;
+}
+.error {
+  color: red;
+  font-size: 14px;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.fileImg {
+  position: absolute;
+  right: 0px;
+  width: 38px;
+  bottom: 0px;
+  border-radius: 0px 6px 6px 0;
+}
+
+.sidebar-nav {
+  width: var(--offcanvas-width) !important;
+}
+
+.sidebar-link .right-icon {
+  transition: all 0.2s;
+}
+
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  .offcanvas-backdrop {
+    display: none !important;
+  }
+
+  .sidebar-nav {
+    transform: none !important;
+    visibility: visible !important;
+    top: var(--topNavbarHeight) !important;
+  }
+
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+}
+
+/* @media (max-width: 480px) {
+  .deshboard-counts .card {
+    margin-bottom: 20px;
+  }
+
+  .deshboard-tabs .nav-tabs .nav-link {
+    padding: 6px;
+    font-size: 12px;
+  }
+} */
+
+/* For LODE  */
+
+#preloader {
+  background: url("/assect/IMG/loder.gif") no-repeat center center;
+  background-size: 15%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
